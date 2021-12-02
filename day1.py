@@ -12,4 +12,4 @@ while pre:
         count += 1
 
 print(f"Part 1: {count}")
-file1.close()
+file.close()
