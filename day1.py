@@ -1,4 +1,4 @@
-file = open('day1/input', 'r')
+file = open('day/1/input', 'r')
 count = 0
 pre = file.readline()
 while pre:
