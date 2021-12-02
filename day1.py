@@ -1,4 +1,3 @@
-
 file = open('day1/input', 'r')
 count = 0
 pre = file.readline()
@@ -11,5 +10,7 @@ while pre:
     if line > pre:
         count += 1
 
-print(f"Part 1: {count}")
+    pre = line
+
+print(count)
 file.close()
