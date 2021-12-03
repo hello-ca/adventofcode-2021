@@ -12,5 +12,6 @@ with open('day1/input') as file:
 
         pre = line
 
-    print(count)
+    # print(count)
+    print(f'Part 1: {count}')
     file.close()
