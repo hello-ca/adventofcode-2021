@@ -32,18 +32,30 @@ def getGrids(file):
 
 
 def checkGrids(grids, numbers):
-    result2 = [[-1]*2] * len(grids)
+    #part 1
+    print('---Part 1---')
+    result = [[-1]*2] * len(grids)
     all_index = len(numbers) + 1
     score = 0
     for i in range(len(grids)):
-        result2[i] = checkGrid(grids[i], numbers)
-        if result2[i][0] < all_index:
-            all_index = result2[i][0]
-            score = result2[i][1]
+        result[i] = checkGrid(grids[i], numbers)
+        if result[i][0] < all_index:
+            all_index = result[i][0]
+            score = result[i][1]
 
-    log(result2)
+    log(result)
     print(score)
     print(all_index)
+
+    #part 2
+    print('---Part 2---')
+    all_index = 0
+    for i in range(len(grids)):
+        if result[i][0] > all_index:
+            all_index = result[i][0]
+            score = result[i][1]
+
+    print(score)
 
 def checkGrid(grid, numbers):
     newgrid = np.array(grid)
@@ -97,5 +109,3 @@ with open('day4/input') as file:
     log(grids[0][0][1])
     file.close()
 
-
-#part 2
