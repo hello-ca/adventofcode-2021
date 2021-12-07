@@ -41,9 +41,11 @@ def genFish2(days):
     for i in range(days):
         # print(fishes[:total])
         zeros = np.argwhere(fishes[:total] == 0)
-        nonzeros = np.nonzero(fishes[:total] > 0)
-        fishes[nonzeros] -= 1
-
+        # nonzeros = np.nonzero(fishes[:total] > 0)
+        # fishes[nonzeros] -= 1
+        for j in range(total):
+            if (fishes[j] > 0):
+                fishes[j] -= 1
         
         if len(zeros) > 0:
             # print(zeros)
