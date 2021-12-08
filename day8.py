@@ -44,11 +44,7 @@ def parseLine2(line):
     items = groups[1].strip().split(' ')
 
     number = guessNumber(groups[0].strip().split(' '), groups[1].strip().split(' '))
-    # count = 0
-    # for item in items:
-        
 
-    # print(count)
     return number
 
 def guessNumber(items, targets):
@@ -88,13 +84,7 @@ def guessNumber(items, targets):
                     print(myguess)
                     number += decodeNumber(myguess, targets)
 
-    # validGuess(guessmap1)
-    # for num in [1, 4, 7, 8]:
-
-        
-
     return number
-    # print(uniqueMap)
 
 def validGuess(items, myguess):
     # print(myguess)
@@ -117,8 +107,8 @@ def toNumber(value, myguess):
 
 def decodeNumber(myguess, numbers):
     result = 0
-    print(myguess)
-    print(numbers)
+    log(myguess)
+    log(numbers)
     for number in numbers:
         log('**checking**')
         log(number)
@@ -151,7 +141,7 @@ def parseAlline2(file):
 
 with open('day8/input') as file:
     # For part 1
-    # parseAlline(file)
+    parseAlline(file)
 
     # For part 2
     parseAlline2(file)
